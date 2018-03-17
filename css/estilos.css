@@ -1,0 +1,267 @@
+* {margin:0; padding:0;}
+html{
+	background-color:;
+	}
+body {
+	width:1000px;
+	height:600px;
+	margin:auto;
+	background:;
+	font-family: "Nunito Sans", sans-serif;
+}
+#container{background:;
+	border-radius:5px;  
+	box-shadow: 2px 2px 3px 3px rgba(0,0,0,.8);
+}
+section#logo{
+	width:200px;
+	height:150px;
+	float:left;
+}
+section#banner{
+	width:800px;
+	height:150px;
+	float:right;
+	background:white;
+
+}
+section#banner h1{
+	padding-top:30px;
+	margin-left:60px;
+}
+main {
+	margin-top:3px;
+	padding-top:5%;
+	width:1000px;
+	height:388px;
+	display:inline-block;
+	background:;
+}
+
+.bienvenida{
+	width:700px;
+	height:388px;
+	float:left;
+	background:;
+}
+.entrada{
+	width:300px;
+	height:388px;
+	float:right;
+	background:;
+}
+
+form#formContacto input{ 
+	 border-radius:5px;  
+	 box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8); 
+	 font:bold 12px Arial, Helvetica, sans-serif; 
+	 height: 40px; line-height: 20px; padding:0 2px;
+	 width: 80%; } 
+	 
+.envio input#envio{ 
+	 border-radius:5px;  
+	 box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8); 
+	 font:bold 18px Arial, Helvetica, sans-serif; 
+	 height: 40px; line-height: 20px; padding:0 2px;
+	 width: 20%; } 
+
+footer{
+	width:1000px;
+	height:30px;
+	background-color:#f1f1f1;
+	text-align: center;
+	border:1px solid #ccc;
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	height:50px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+	margin:auto;
+    padding:20px 5px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+	width:1000`px;
+	height:388px;
+	
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.mySlides {
+	display:none;	
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  height:350px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 22px;
+  margin-top: -22px;
+  color: red;
+  font-weight: bold;
+  font-size: 48px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#nosotros{width:1000px;
+	height:388px;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 10px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+  float:right;
+}
+ a.twitter-follow-button {
+	background: #55ACEE;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius:2px 2px;
+	padding:4px;
+    font-size: 14px;
+	margin:auto;
+ }
+.fa:hover {
+    opacity: 0.7;
+}
+.center {
+	background:;
+    margin: auto;
+    width: 650px;
+}
+input[type="text"]{
+	background:#ffff2;
+	width:350px;
+	font-size:18px;
+	
+}
+
+	
+	
