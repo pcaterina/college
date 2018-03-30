@@ -1,0 +1,5 @@
+﻿Claudia;Plesa;C/Humanes, 59, 1D;617526018;plesaclaudia@hotmail.com;25;mujer;1eso
+Angel;Plesa;C/Humanes;670337375;geluplesa@gmail.com;47;hombre;2bch
+Caterina;Plesa;C/Humanes, 59, 1D;912663488;catiplesa0203@gmail.com;49;mujer;4eso
+Ana Maria;Garcia;c/Buenavista, 89,4C,Pinto-Madrid;914776355;ana@hotmail.es;30;mujer;3eso
+Ivana ;Fernandez;C/Humanes, 59, 1D;617526018;plesaclaudia@hotmail.com;20;mujer;4eso

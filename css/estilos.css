@@ -6,11 +6,13 @@ body {
 	width:1000px;
 	height:600px;
 	margin:auto;
-	background:;
+	background:white;
 	font-family: "Nunito Sans", sans-serif;
 }
-#container{background:;
-	border-radius:5px;  
+#container{background:white;
+  width:1000px;
+  height:600px;
+	border-radius:5px 0px;  
 	box-shadow: 2px 2px 3px 3px rgba(0,0,0,.8);
 }
 section#logo{
@@ -32,75 +34,85 @@ section#banner h1{
 main {
 	margin-top:3px;
 	padding-top:5%;
-	width:1000px;
-	height:388px;
+	width:990px;
+	height:330px;
 	display:inline-block;
 	background:;
 }
 
 .bienvenida{
-	width:700px;
-	height:388px;
+	width:600px;
+	height:330px;
 	float:left;
-	background:;
+	background:white;
 }
 .entrada{
-	width:300px;
-	height:388px;
+	width:290px;
+	height:330px;
 	float:right;
-	background:;
+	background:white;
 }
 
 form#formContacto input{ 
-	 border-radius:5px;  
+	 border-radius:3px;  
 	 box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8); 
-	 font:bold 12px Arial, Helvetica, sans-serif; 
-	 height: 40px; line-height: 20px; padding:0 2px;
-	 width: 80%; } 
+	 font:18px Arial, Helvetica, sans-serif;
+	 color:#55ACEE;	 
+	 height: 30px; line-height: 30px; padding:2px 2px;
+	 width: 70%;
+	 background:white;	 }
+	 
+form#formContacto p{ 
+	 font:bold 20px Arial, Helvetica, sans-serif; 
+	 color:;
+	  padding:2px 2px;}
 	 
 .envio input#envio{ 
 	 border-radius:5px;  
 	 box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8); 
 	 font:bold 18px Arial, Helvetica, sans-serif; 
-	 height: 40px; line-height: 20px; padding:0 2px;
-	 width: 20%; } 
+	 height: 30px; line-height: 20px; padding:0 2px;
+	 width: 20%;
+	 background:white;	 } 
 
 footer{
+	position: absolute;
 	width:1000px;
 	height:30px;
 	background-color:#f1f1f1;
 	text-align: center;
-	border:1px solid #ccc;
+	border-radius:0px 0px 5px 5px;  
+	box-shadow: 2px 2px 1px 3px rgba(0,0,0,.8);
 }
 
 /* Style the tab */
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color:#55ACEE ;
 	height:50px;
 }
 
 /* Style the buttons inside the tab */
 div.tab button {
-    background-color: inherit;
+	background-color:#55ACEE ;
     float: left;
+	display: block;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
     font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
 div.tab button:hover {
-    background-color: #ddd;
+    background-color: #00cc99;
 }
 
 /* Create an active/current tablink class */
 div.tab button.active {
-    background-color: #ccc;
+    background-color: #55ACEE;
 }
 
 /* Style the tab content */
@@ -110,8 +122,9 @@ div.tab button.active {
     padding:20px 5px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
-	width:1000`px;
-	height:388px;
+	width:90`px;
+	height:350px;
+	background:white;
 	
 }
 
@@ -132,7 +145,7 @@ div.tab button.active {
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  height:350px;
+  height:338px;
   position: relative;
   margin: auto;
 }
@@ -188,7 +201,7 @@ div.tab button.active {
   cursor:pointer;
   height: 13px;
   width: 13px;
-  margin: 0 2px;
+  
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -221,8 +234,8 @@ div.tab button.active {
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-#nosotros{width:1000px;
-	height:388px;
+#nosotros{width:990px;
+	height:350px;
 }
 .fa-twitter {
   background: #55ACEE;

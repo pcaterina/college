@@ -1,149 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta content="text/html; charset=UTF-8" http-equiv="content-type">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Colegio</title>
-	<meta name="keywords" content="">
-	<meta name="author" content="Cati Plesa"/> 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200i,300,400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<script type="text/JavaScript" src="js/jquery-3.2.1.js"></script>
-	<script type="text/JavaScript" src="js/general.js"></script>
-</head>
-<body>
-	<div id="container">
-	<header id="header">
-		<section id="logo"><a href="" onclick="openPortada" ><img src=imagenes/logo.jpg width="200" height="150"> </a></section>
-		<section id="banner">	
-			<!--<a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>-->
-			<h1 style=" color:#00cc99; font-size:40px; ">KatasTrophiCall College</h1>
-		</section>
-	</header>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico">
+		<meta name="keywords" content="">
+		<meta name="author" content="Cati Plesa"/> 
+		<title>College</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200i,300,400,600,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<script type="text/JavaScript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/JavaScript" src="js/general.js"></script>
+	</head>
+		<body>
+			<div id="container">
+				<header id="header">
+					<section id="logo"><a href="" onclick="openPortada()" ><img src=imagenes/logo.jpg width="200" height="150"> </a></section>
+					<section id="banner">	
+						<h1 style=" color:#00cc99; font-size:40px; ">KatasTrophiCall College</h1>
+					</section>
+				</header>
+			<div class="tab" id="tabMenu">
+				<button class="tablinks"  onclick="openMenu(event, 'inicio')">INICIO</button>
+				<button class="tablinks"  onclick="openMenu(event, 'contacto')">CONTACTO</button>
+				<button class="tablinks"  onclick="openMenu(event, 'galeria')">GALERIA</button>
+				<button class="tablinks"  onclick="openMenu(event, 'inscription')">INSCRIPCION</button>
+				<button class="tablinks"  onclick="openMenu(event, 'nosotros')">NOSOTROS</button>
+				</div>
+			<div id="todotabcontent">
 
-		<div class="tab">
-			<button class="tablinks"  onclick="openMenu(event, 'inicio')">INICIO</button>
-			<button class="tablinks"  onclick="openMenu(event, 'contacto')">CONTACTO</button>
-			<button class="tablinks"  onclick="openMenu(event, 'galeria')">GALERIA</button>
-			<button class="tablinks"  onclick="openMenu(event, 'inscription')">INSCRIPTION</button>
-			<button class="tablinks"  onclick="openMenu(event, 'nosotros')">NOSOTROS</button>
-		</div>
-		<div id="todotabcontent">
+				<div id="inicio" name="inicio" class="tabcontent">
+					<main class="portada" name="portada">
+						<article class="bienvenida">
+							<p style=" line-height:1.6em; font-size:24px;">Bienvenidos a la nueva página Web del KatasTrophiCall College de Pinto. Con ella intentamos tener una página 
+							actualizada, fresca y dinámica aprovechando el avance del Internet y las nuevas tecnologías y usándola para mejorar
+							nuestra comunicación, ofreciendo toda la información referente al Colegio, actividades, horarios, datos de contacto etc.
+							</p>
+						</article>
+						<article class="entrada" id="fotoinicio">  <img src="imagenes/entrada.jpg" width="250" height="200"</article>
+					</main>
+				</div>
+				<div id="contacto" class="tabcontent">
+					<p><i>Déjanos tu mensaje, intentaremos responder con la mayor brevedad.</i></p>
+						<form action="php/mail.php"  method="POST" onsubmit="return (letraMayuscula(this);" >
+							<p>Nombre </br>
+							<input type="text" name="nombre" id="nombre" onkeypress="return (permite(event, 'car')&& letraMayuscula(event,this))"  maxlength="20"  title="Este campo solo admite letras!" required /> </p>
+							<p>Correo electrónico <br />
+							<input type="email" name="email" id="email"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" value=""   /></p>
+							<p>Asunto<br />
+							<input type="text" name="asunto" id="asunto"/> </p>
+							<p>Mensaje<br />
+							<textarea name="mensaje" id="mensaje" cols="80" rows="5" ></textarea> </p><br/>
+							<p class="envio"><input type="submit" id="envio" name="envio" value="Enviar"  /></p>
+						</form>
+				</div>
+				<div id="galeria" class="tabcontent">
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 3</div>
+							<img src="imagenes/galeria1.png"  width="100%" height="340px">
+							<div class="text">ENTRADA</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 3</div>
+							<img src="imagenes/galeria2.jpg" width="100%" height="340px">
+							<div class="text">BIBLIOTECA</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<img src="imagenes/galeria3.jpg" width="100%" height="340px" align="center">
+							<div class="text">	</div>
+						</div>
+		
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span> 
+						<span class="dot" onclick="currentSlide(2)"></span> 
+						<span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+				</div>
 
-			<div id="inicio" name="inicio" class="tabcontent">
-				<main class="portada" name="portada">
-					<article class="bienvenida">
+				<div id="inscription" class="tabcontent">
+					<div class="center">
+						<form name="myForm"  action="php/inscription.php"  method="POST" onsubmit="return ( validarForm() && letraMayuscula(this); " >
+							<table >
+							<!--onkeypress="return soloLetras(event,this);"-->
+								<tr><td><p>Nombre:    </p></td>  <td><input type="text" id="nombre" name="nombre" onkeypress="return (permite(event, 'car')&& letraMayuscula(event,this))"   maxlength="20"  title="Este campo solo admite letras!" required></input> </td></tr>
+								<tr><td><p>Apellidos: </p></td>  <td><input type="text" id="apellido" name="apellido"onkeypress="return (permite(event, 'car')&& letraMayuscula(event,this))"   maxlength="50"  title="Este campo solo admite letras!" required ></input></td></tr>
+								<tr><td><p>Direccion: </p></td>  <td><input type= "text" id="dir" name="dir" required /></td></tr>
+								<tr><td><p>Telefono:  </p></td>  <td><input type= "tel" id="tel" name="telf" size="20" maxlength="9"  pattern="^[9|8|6]\d{8}$" title="Numero de 9 digitos que empieza por 6, 8 o 9" onkeypress="return permite(event, 'num')"/></td></tr>
+								<tr><td><p>Sexo:</p></td><td><input type="radio" name="sexo" id="sexoHombre" value="hombre">Hombre</input>
+												 &nbsp;&nbsp;<input type="radio" name="sexo" id="sexoMujer" value="mujer">Mujer</input></td></tr>
+								<tr><td><p>Edad:</p> </td>  <td><input type="number" name="edad" id="edad"  maxlength="3"  min="13" max="40" required ></input></td></tr>
+								<tr><td><p>e-mail:</p> </td><td><input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"size="20" maxlength="30" required></input> </td></tr>
+							</table>
+							<h5> SELECCIONA EL CURSO</h5>
+								<input type="checkbox" name="curso" id="1ESO" value="1eso">Curso 1ESO</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="checkbox" name="curso" id="2ESO" value="2eso">Curso 2ESO</input></br>
+								<input type="checkbox" name="curso" id="3ESO" value="3eso">Curso 3ESO</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="checkbox" name="curso" id="4ESO" value="4eso">Curso 4ESO</input></br>
+								<input type="checkbox" name="curso" id="1BCH" value="1bch">Curso 1BCH</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="checkbox" name="curso" id="2BCH" value="2bch">Curso 2BCH</input></br></br>
+								<input type="submit" id="submit" value="Aceptar"  style="height: 25px; width: 100px; "> 
+								<input type="reset" value="Cancelar" style="height: 25px; width: 100px; ">
+						</form>
+					</div>
+				</div>
+				<div id="nosotros" class="tabcontent">
+					<h3>My First Google Map </h3>
+						<div id="map" style="border:solid 1px; width:500px; height: 300px; float:right; margin-right:25px; margin-bottom:30px;"> </div>
+						</div>
+						<script async defer
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3OkPTi9Mv_DVANRG56cdNlyFZka61-mo&callback=initMap">
+						</script>
+	
+			</div><!--fin todotabcontent -->
+	
+				<main class="portada" id="portada" name="portada" >
+					<article class="bienvenida" >
 						<p style=" line-height:1.6em; font-size:24px;">Bienvenidos a la nueva página Web del KatasTrophiCall College de Pinto. Con ella intentamos tener una página 
 						actualizada, fresca y dinámica aprovechando el avance del Internet y las nuevas tecnologías y usándola para mejorar
 						nuestra comunicación, ofreciendo toda la información referente al Colegio, actividades, horarios, datos de contacto etc.
 						</p>
 					</article>
-					<article class="entrada" id="fotoinicio">  <img src="imagenes/entrada.jpg" width="280" height="230"</article>
+					<article class="entrada">  <img src="imagenes/entrada.jpg" style="width:250px; height:200px;"align="center"></article>
 				</main>
-		</div>
-		<div id="contacto" class="tabcontent">
-			<p><i>Déjanos tu mensaje, intentaremos responder con la mayor brevedad.</i></p>
-			<form id="formContacto"action="" method="" >
-				<p>Nombre <br />
-				<input type="text" name="your-name" value=""    /> </p>
-				<p>Correo electrónico <br />
-				<input type="email" name="your-email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" value=""   /></p>
-				<p>Asunto<br />
-				<input type="text" name="your-subject" value=""  /> </p>
-				<p>Mensaje<br />
-				<textarea name="your-message" cols="100" rows="5" ></textarea> </p>
-				<p class="envio"><input type="submit" id="envio" name="envio" value="Enviar"  /></p>
-			</form>
-		</div>
-
-		<div id="galeria" class="tabcontent">
-			<div class="slideshow-container">
-				<div class="mySlides fade">
-					<div class="numbertext">1 / 3</div>
-					<img src="imagenes/galeria3.png"  width="980px" height="350px">
-					<div class="text">ENTRADA</div>
-				</div>
-
-				<div class="mySlides fade">
-					<div class="numbertext">2 / 3</div>
-					<img src="imagenes/biblioteca.jpg" width="980px" height="350px">
-					<div class="text">BIBLIOTECA</div>
-				</div>
-
-				<div class="mySlides fade">
-					<div class="numbertext">3 / 3</div>
-					<img src="imagenes/galeria1.jpg" width="980px" height="350px" align="center">
-					<div class="text">	</div>
-				</div>
-		
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<div style="text-align:center">
-				<span class="dot" onclick="currentSlide(1)"></span> 
-				<span class="dot" onclick="currentSlide(2)"></span> 
-				<span class="dot" onclick="currentSlide(3)"></span> 
-			</div>
-		</div>
-
-		<div id="inscription" class="tabcontent">
-	
-			<div class="center">
-			<form action=""  method="post" >
-
-			<table >
-				<tr><td><p>Nombre:<p> </td> <td><input type="text" id="nombre" required></input> </td></tr>
-				<tr><td><p> Apellidos: </p></td>  <td><input type="text" id="apellido" ></input></td></tr>
-				<tr><td><p>Direccion: </p></td>  <td><input type= "text" id="dir"  /></td></tr>
-				<tr><td><p>Telefono: </p></td>  <td><input type= "tel" id="tel" size="9" maxlength="9"/></td></tr>
-				<tr><td><p>Sexo:</p></td><td><input name="sexo" id="sexo" type="radio" value="h">Hombre</input>&nbsp;
-							 <input name="sexo" type="radio" value="m">Mujer</input></td></tr>
-				<tr><td><p> Edad:</p> </td>  <td><input type="number" id="edad"  maxlength="3"></input></td></tr>
-				<tr><td><p>e-mail:</p> </td><td><input type="email" id="email" size="20" maxlength="30"></input> </td></tr>
-			</table>
-
-<h3> SELECCIONA EL CURSO</h3>
-	<input type="checkbox" name="curso" id="1ESO" value="">CURSO 1ESO</input></br>
-	<input type="checkbox" name="curso" id="2ESO" value="">CURSO 2ESO</input></br>
-	<input type="checkbox" name="curso" id="3ESO" value="">CURSO 3ESO</input></br>
-	<input type="checkbox" name="curso" id="4ESO" value="">CURSO 4ESO</input></br>
-	<input type="checkbox" name="curso" id="1BCH" value="">CURSO 1BCH</input></br>
-	<input type="checkbox" name="curso" id="2BCH" value="">CURSO 2BCH</input></br>
-<table>
-	<tr><td></br> <input type="button" onclick="validarInscription()"value="Aceptar" > </td> 
-	<td></br><input type="reset" value="Cancelar"></td></tr>	
-</table>
-</form>
-</div>
-</div>
-<div id="nosotros" class="tabcontent">
-  <h3>My First Google Map </h3>
-  <div id="map" style="border:solid 1px; width:500px; height: 350px; float:right; margin-right:25px; margin-bottom:20px;"> </div>
-</div>
-	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3OkPTi9Mv_DVANRG56cdNlyFZka61-mo&callback=initMap">
-	</script>
-	
-		</div><!--fin todotabcontent-->
-
-		<main class="portada" id="portada" name="portada">
-			<article class="bienvenida">
-				<p style=" line-height:1.6em; font-size:24px;">Bienvenidos a la nueva página Web del KatasTrophiCall College de Pinto. Con ella intentamos tener una página 
-				actualizada, fresca y dinámica aprovechando el avance del Internet y las nuevas tecnologías y usándola para mejorar
-				nuestra comunicación, ofreciendo toda la información referente al Colegio, actividades, horarios, datos de contacto etc.
-				</p>
-			</article>
-			<article class="entrada">  <img src="imagenes/entrada.jpg" width="280" height="230"</article>
-		</main>
-
-		<footer>
-			<a class="twitter-follow-button"
-				href="https://twitter.com/TwitterDev" data-size="large">Siguenos en @Twitter</a>
-		</footer>
-	</div><!--fin container-->
-
-
-     
-</body>
+				<footer>
+					<a class="twitter-follow-button"
+					href="https://twitter.com/TwitterDev" data-size="large">Siguenos en @Twitter</a>
+				</footer>
+			</div><!--fin container-->
+    </body>
 </html> 
