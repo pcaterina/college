@@ -162,8 +162,4 @@ function permite(elEvento, permitidos) {
 		 return true;
 }
 
-/*<form action="/action_page.php">
-Password: <input type="password" name="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
-<input type="submit">
-E-mail: <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-</form>*/
+/
